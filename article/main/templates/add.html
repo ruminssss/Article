@@ -1,0 +1,16 @@
+{% extends 'main_art.html' %}
+
+{% block title %}<title>Добавить статью</title>{% endblock %}
+
+{% block content %}
+{% if user.is_authenticated %}
+<h1>Добавить статью</h1>
+<form class="add_form" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="добавить">
+</form>
+{% else %}
+<p>Войдите, чтобы написать статью</p>
+{% endif %}
+{% endblock %}

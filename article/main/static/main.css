@@ -1,0 +1,64 @@
+.header {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    height: 60px;
+    width: 1420px;
+    background-color:dimgray;
+}
+.title {
+    position: absolute;
+    left: 20px;
+    top: -10px;
+    color: white;
+}
+.logout {
+   position: absolute;
+   left: 1200px;
+   top: 20px;
+}
+.name {
+   position: absolute;
+   left: 1250px;
+   top: 7px;
+   color: white
+}
+.login {
+   position: absolute;
+   left: 1200px;
+   top: 20px;
+}
+.content {
+   position: relative;
+   left: 50px;
+   top: 60px;
+}
+.form_login {
+   position: absolute;
+   left: 500px;
+   top: 200px;
+   background-color: dimgray;
+   border-radius: 5px;
+}
+.add_comment {
+   position: relative;
+   top: 50px;
+   left: 50px;
+}
+.add {
+   position: absolute;
+   left: 1080px;
+   top: 20px;
+}
+.add_form {
+   position: absolute;
+   left: 500px;
+   top: 200px;
+   background-color: dimgray;
+   border-radius: 5px;
+}
+.author {
+   position: absolute;
+   left: 500px;
+   top: 20px;
+}

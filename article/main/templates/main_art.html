@@ -1,0 +1,23 @@
+{% load static %}
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="{% static 'main.css' %}">
+        <meta charset="UTF-8">
+        {% block title %}{% endblock %}
+    </head>
+    <body>
+        <div class="header">
+            <h1 class="title">Статьи</h1>
+            <h3 class="author">Автором сайта является Всеволод горбунов</h3>
+            {% if user.is_authenticated %}
+            <p class="name">{{ user.username }}</p>
+            <a class="add" href="/add/">добавить статью</a>
+            <a class="logout" href="/logout/">выйти</a>
+            {% else %}
+            <a class="login" href="/login/">войти</a>
+            {% endif %}
+        </div>
+        {% block content %}
+        {% endblock %}
+    </body>
+</html>

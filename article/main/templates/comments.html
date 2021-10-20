@@ -1,0 +1,21 @@
+{% extends 'main_art.html' %}
+
+{% block title %}<title>Комментарии</title>{% endblock %}
+
+{% block content %}
+{% for comment in comments %}
+<div class="content">
+    <h2>{{ comment.author }}</h2>
+    <p>{{ comment.content }}</p>
+</div>
+{% endfor %}
+{% if user.is_authenticated %}
+<form class="add_comment" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="добавить комментарий">
+</form>
+{% else %}
+<p><a href="/login/">Войдите</a> чтобы оставить комментарий</p>
+{% endif %}
+{% endblock %}

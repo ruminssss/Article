@@ -1,0 +1,16 @@
+{% extends 'main_art.html' %}
+
+{% load static %}
+
+{% block title %}<title>Главная страница</title>{% endblock %}
+
+{% block content %}
+{% for art in arts %}
+<div class="content">
+    <h2>{{ art.author }}</h2>
+    <h1>{{ art.title }}</h1>
+    <p>{{ art.content }}</p>
+    <a href="{{ art.pk }}">Комментарии</a>
+</div>
+{% endfor %}
+{% endblock %}
